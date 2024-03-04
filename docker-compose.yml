@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  hugo:
+    container_name: "hugo_playground"
+    build: .
+    ports:
+      - "1313:1313"
+    volumes:
+      - type: bind
+        source: ./
+        target: /srv/hugo
